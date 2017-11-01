@@ -5,6 +5,7 @@ namespace ECommerce.ProductCatalog.API.Models
 {
     public class ProductDto
     {
+        public ProductDto() { }
         [JsonProperty("id")]
         public Guid Id { get; set; }
 

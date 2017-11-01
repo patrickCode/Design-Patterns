@@ -14,6 +14,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
     <PackageReference Include="Microsoft.ServiceFabric" Version="6.0.219" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="2.8.219" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="2.8.219" />
     <PackageReference Include="Microsoft.ServiceFabric.Data" Version="2.8.219" />
     <PackageReference Include="Microsoft.ServiceFabric.Services" Version="2.8.219" />
@@ -25,7 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ECommerce.CheckoutService.Model\ECommerce.CheckoutService.Model.csproj" />
     <ProjectReference Include="..\ECommerce.ProductCatalog.Model\ECommerce.ProductCatalog.Model.csproj" />
+    <ProjectReference Include="..\ECommerce.UserActor.Interfaces\ECommerce.UserActor.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
