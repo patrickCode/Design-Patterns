@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.CommunicationTrigger.InMemory</AssemblyName>
+    <RootNamespace>PipelineFramework.CommunicationTrigger.InMemory</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Communication\PipelineFramework.Communication.csproj" />
+    <ProjectReference Include="..\..\Interfaces\PipelineFramework.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
+  </ItemGroup>
+
+</Project>

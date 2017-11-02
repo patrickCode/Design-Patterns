@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.Interfaces</AssemblyName>
+    <RootNamespace>PipelineFramework.Interfaces</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Middleware.cs~RF56d9ead.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
