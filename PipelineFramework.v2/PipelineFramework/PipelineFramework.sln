@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommunicationTrigger", "Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.CommunicationTrigger.InMemory", "CommunicationTrigger\InMemory\PipelineFramework.CommunicationTrigger.InMemory.csproj", "{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBus", "Infrastructure\MessageBus\MessageBus.csproj", "{65D35D25-C882-41E5-8541-1157717ACDC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Infrastrucure.MessageBus", "Infrastructure\MessageBus\PipelineFramework.Infrastrucure.MessageBus.csproj", "{65D35D25-C882-41E5-8541-1157717ACDC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

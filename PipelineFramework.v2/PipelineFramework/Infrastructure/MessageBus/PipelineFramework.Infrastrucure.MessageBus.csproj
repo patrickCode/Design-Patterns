@@ -6,4 +6,16 @@
     <RootNamespace>PipelineFramework.Infrastrucure.MessageBus</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.ServiceBus" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AzureQueue\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
+  </ItemGroup>
+
 </Project>
