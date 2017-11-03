@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommunicationTrigger", "Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.CommunicationTrigger.InMemory", "CommunicationTrigger\InMemory\PipelineFramework.CommunicationTrigger.InMemory.csproj", "{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBus", "Infrastructure\MessageBus\MessageBus.csproj", "{65D35D25-C882-41E5-8541-1157717ACDC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D35D25-C882-41E5-8541-1157717ACDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D35D25-C882-41E5-8541-1157717ACDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D35D25-C882-41E5-8541-1157717ACDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D35D25-C882-41E5-8541-1157717ACDC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16} = {3D327C8B-7CB9-4B7A-A427-3FD4064A4CC4}
 		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445} = {1C83410D-ABED-43CE-9215-E0DFCA6E1517}
+		{65D35D25-C882-41E5-8541-1157717ACDC2} = {E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60F6F899-0624-4C98-AF88-0489BCC0C69C}

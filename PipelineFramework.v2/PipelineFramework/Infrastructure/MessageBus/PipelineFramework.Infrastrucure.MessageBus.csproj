@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.Infrastrucure.MessageBus</AssemblyName>
+    <RootNamespace>PipelineFramework.Infrastrucure.MessageBus</RootNamespace>
+  </PropertyGroup>
+
+</Project>

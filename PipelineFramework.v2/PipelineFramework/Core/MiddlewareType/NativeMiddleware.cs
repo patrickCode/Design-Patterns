@@ -1,7 +1,7 @@
-﻿using PipelineFramework.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using PipelineFramework.Interfaces;
 using PipelineFramework.Interfaces.Data;
 using PipelineFramework.Communication.Inbound;
 using PipelineFramework.Communication.Outbound;
@@ -30,6 +30,21 @@ namespace PipelineFramework.Core.MiddlewareType
             (inbox as InMemoryNativeInbox).ExecutionMethodName = "ExecuteAsync";
         }
 
+        public override void SetOutboundRule(Outbox outbox)
+        {
+            base.SetOutboundRule(outbox);
+            if (outbox is InMemoryNativeOutbox)
+            {
+                (outbox as InMemoryNativeOutbox).SuccessMethod = "CompleteAsync";
+                (outbox as InMemoryNativeOutbox).ErrorMethod = "AbortAsync";
+            }
+
+        }
+
         public abstract Task ExecuteAsync(MiddlewareRequest request);
+
+        public abstract Task CompleteAsync(MiddlewareResponse result);
+
+        public abstract Task AbortAsync(MiddlewareException exception);
     }
 }
