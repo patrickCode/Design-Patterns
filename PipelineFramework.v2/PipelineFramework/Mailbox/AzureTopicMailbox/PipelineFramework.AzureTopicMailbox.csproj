@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\PipelineFramework.Core.csproj" />
     <ProjectReference Include="..\..\Infrastructure\MessageBus\PipelineFramework.Infrastrucure.MessageBus.csproj" />
-    <ProjectReference Include="..\..\Interfaces\PipelineFramework.Core.csproj" />
     <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
   </ItemGroup>
 

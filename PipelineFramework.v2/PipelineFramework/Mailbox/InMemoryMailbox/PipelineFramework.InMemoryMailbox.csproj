@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Interfaces\PipelineFramework.Core.csproj" />
+    <ProjectReference Include="..\..\Core\PipelineFramework.Core.csproj" />
     <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
   </ItemGroup>
 

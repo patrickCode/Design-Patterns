@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Core", "Interfaces\PipelineFramework.Core.csproj", "{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Core", "Core\PipelineFramework.Core.csproj", "{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3D327C8B-7CB9-4B7A-A427-3FD4064A4CC4}"
 EndProject
