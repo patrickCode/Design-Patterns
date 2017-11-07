@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PipelineFramework.Interfaces
+namespace PipelineFramework.Core
 {
     public abstract class BasePipeline
     {

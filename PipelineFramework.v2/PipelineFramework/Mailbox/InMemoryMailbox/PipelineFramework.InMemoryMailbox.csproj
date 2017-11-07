@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.InMemoryMailbox</AssemblyName>
+    <RootNamespace>PipelineFramework.InMemoryMailbox</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="InMemoryInbox.cs" />
+    <Compile Remove="InMemoryInboxAddress.cs" />
+    <Compile Remove="InMemoryMailboxMessenger.cs" />
+    <Compile Remove="InMemoryOutbox.cs" />
+    <Compile Remove="InMemoryOutboxAddress.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Interfaces\PipelineFramework.Core.csproj" />
+    <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
+  </ItemGroup>
+
+</Project>

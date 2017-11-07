@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Interfaces", "Interfaces\PipelineFramework.Interfaces.csproj", "{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Communication", "Communication\PipelineFramework.Communication.csproj", "{50E1CCFA-F988-417A-8FBC-2F2958C55C85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Core", "Interfaces\PipelineFramework.Core.csproj", "{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3D327C8B-7CB9-4B7A-A427-3FD4064A4CC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Common", "Shared\Common\PipelineFramework.Common.csproj", "{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Common", "Shared\Common\PipelineFramework.Common.csproj", "{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Core", "Core\PipelineFramework.Core.csproj", "{756DFAF1-85C1-4764-BDFC-F488DAC26E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Infrastrucure.MessageBus", "Infrastructure\MessageBus\PipelineFramework.Infrastrucure.MessageBus.csproj", "{65D35D25-C882-41E5-8541-1157717ACDC2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommunicationTrigger", "CommunicationTrigger", "{1C83410D-ABED-43CE-9215-E0DFCA6E1517}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Infrastructure.Events", "Infrastructure\Events\PipelineFramework.Infrastructure.Events.csproj", "{E40CA272-8A48-435A-BFA9-F5330D0FB17A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.CommunicationTrigger.InMemory", "CommunicationTrigger\InMemory\PipelineFramework.CommunicationTrigger.InMemory.csproj", "{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mailbox", "Mailbox", "{A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Infrastrucure.MessageBus", "Infrastructure\MessageBus\PipelineFramework.Infrastrucure.MessageBus.csproj", "{65D35D25-C882-41E5-8541-1157717ACDC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.InMemoryMailbox", "Mailbox\InMemoryMailbox\PipelineFramework.InMemoryMailbox.csproj", "{3D650BAF-A597-4FC2-A3C3-38E35425BECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.AzureTopicMailbox", "Mailbox\AzureTopicMailbox\PipelineFramework.AzureTopicMailbox.csproj", "{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,34 +31,36 @@ Global
 		{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9C9465D-2E81-48B5-BE57-EF99130ABC5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50E1CCFA-F988-417A-8FBC-2F2958C55C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50E1CCFA-F988-417A-8FBC-2F2958C55C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50E1CCFA-F988-417A-8FBC-2F2958C55C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50E1CCFA-F988-417A-8FBC-2F2958C55C85}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{756DFAF1-85C1-4764-BDFC-F488DAC26E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{756DFAF1-85C1-4764-BDFC-F488DAC26E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{756DFAF1-85C1-4764-BDFC-F488DAC26E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{756DFAF1-85C1-4764-BDFC-F488DAC26E08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65D35D25-C882-41E5-8541-1157717ACDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65D35D25-C882-41E5-8541-1157717ACDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65D35D25-C882-41E5-8541-1157717ACDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65D35D25-C882-41E5-8541-1157717ACDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40CA272-8A48-435A-BFA9-F5330D0FB17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40CA272-8A48-435A-BFA9-F5330D0FB17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40CA272-8A48-435A-BFA9-F5330D0FB17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40CA272-8A48-435A-BFA9-F5330D0FB17A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D650BAF-A597-4FC2-A3C3-38E35425BECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D650BAF-A597-4FC2-A3C3-38E35425BECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D650BAF-A597-4FC2-A3C3-38E35425BECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D650BAF-A597-4FC2-A3C3-38E35425BECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B078CB26-2BAF-48DD-8CDA-7EFF2A845F16} = {3D327C8B-7CB9-4B7A-A427-3FD4064A4CC4}
-		{D32BFBEF-5D25-4337-AFFA-935C9CAE8445} = {1C83410D-ABED-43CE-9215-E0DFCA6E1517}
 		{65D35D25-C882-41E5-8541-1157717ACDC2} = {E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}
+		{E40CA272-8A48-435A-BFA9-F5330D0FB17A} = {E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}
+		{3D650BAF-A597-4FC2-A3C3-38E35425BECE} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
+		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60F6F899-0624-4C98-AF88-0489BCC0C69C}

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.Core</AssemblyName>
+    <RootNamespace>PipelineFramework.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mailbox\Inbox.cs" />
+    <Compile Remove="Mailbox\MailboxMessenger.cs" />
+    <Compile Remove="Mailbox\Outbox.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Middleware.cs~RF56d9ead.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>

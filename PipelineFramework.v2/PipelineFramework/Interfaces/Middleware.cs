@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using PipelineFramework.Interfaces.Communication;
 
-namespace PipelineFramework.Interfaces
+namespace PipelineFramework.Core
 {
     public abstract class Middleware
-    {
+    {   
         public string Id { get; set; }
         public string Name { get; set; }
-        public Inbox Inbox { get; set; }
-        public Outbox Outbox { get; set; }
+        
+        public Mailbox Inbox { get; set; }
+        public Mailbox Outbox { get; set; }
         public Guid ExecutionId { get; set; }
         public TimeSpan Timeout { get; set; }
         public IDictionary<string, object> EnvironmentConfiguration { get; set; }
 
         protected List<Type> _allowedInboxTypes;
         protected List<Type> _allowedOutboxTypes;
-
-        protected ITriggerResolver _triggerResolver;
 
         public Middleware(string id, string name)
         {
@@ -40,12 +38,12 @@ namespace PipelineFramework.Interfaces
                 EnvironmentConfiguration.Add(key, value);
         }
 
-        public virtual void SetInboundRule(Inbox inbox)
-        {
+        public virtual void SetInbox(Mailbox inbox)
+        {   
             Inbox = inbox;
         }
 
-        public virtual void SetOutboundRule(Outbox outbox)
+        public virtual void SetOutbox(Mailbox outbox)
         {
             Outbox = outbox;
         }
@@ -62,10 +60,10 @@ namespace PipelineFramework.Interfaces
                     errors.Add("No outbound rule specified for the Middleware.");
 
                 if (!ValidateInboxTypes())
-                    errors.Add($"Inbox of type {Inbox.RuleName} is not supported by this Middleware.");
+                    errors.Add($"Inbox of type {Inbox.Name} is not supported by this Middleware.");
 
                 if (!ValidateOutboxTypes())
-                    errors.Add($"Outbox of type {Outbox.RuleName} is not supported by this Middleware.");
+                    errors.Add($"Outbox of type {Outbox.Name} is not supported by this Middleware.");
 
                 if (Timeout == TimeSpan.Zero)
                     errors.Add("Middleware cannot have zero timespan");
