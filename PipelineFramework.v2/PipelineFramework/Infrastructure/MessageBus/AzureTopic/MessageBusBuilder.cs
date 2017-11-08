@@ -18,7 +18,7 @@ namespace PipelineFramework.Infrastrucure.MessageBus.AzureTopic
             var client = new SubscriptionClient(connectionString: _configuration.ConnectionString,
                 topicPath: topicName,
                 subscriptionName: subscriptionName);
-            await client.AddRuleAsync("", new CorrelationFilter(correlationFilter));
+            await client.AddRuleAsync(correlationRuleName, new CorrelationFilter(correlationFilter));
             return client;
         }
 

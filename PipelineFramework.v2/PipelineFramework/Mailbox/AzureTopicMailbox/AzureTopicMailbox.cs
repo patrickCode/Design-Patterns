@@ -74,5 +74,10 @@ namespace PipelineFramework.AzureTopicMailbox
             UnreadMessages.Remove(message);
             ReadMessages.Add(message);
         }
+
+        public Task StopListening()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

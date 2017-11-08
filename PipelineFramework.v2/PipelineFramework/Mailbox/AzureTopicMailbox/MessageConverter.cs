@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using PipelineFramework.Common.Converter;
 using PipelineFramework.Core.Message;
+using PipelineFramework.Common.Converter;
 using PipelineFramework.AzureTopicMailbox.Spec;
 using PipelineFramework.Infrastrucure.MessageBus.Spec;
 
@@ -20,7 +20,10 @@ namespace PipelineFramework.AzureTopicMailbox
                 return Convert(baseMessage as MiddlewareRequest);
             if (baseMessage is MiddlewareResponse)
                 return Convert(baseMessage as MiddlewareResponse);
-            return Convert(baseMessage as MiddlewareException);
+            if (baseMessage is MiddlewareException)
+                return Convert(baseMessage as MiddlewareException);
+
+            return null;
         }
 
         public BaseMessage Convert(Message message)

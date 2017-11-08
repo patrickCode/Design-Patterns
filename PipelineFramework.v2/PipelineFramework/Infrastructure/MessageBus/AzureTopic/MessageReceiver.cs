@@ -43,7 +43,6 @@ namespace PipelineFramework.Infrastrucure.MessageBus.AzureTopic
             };
 
             _client.RegisterMessageHandler(ProcessMessageAsync, messageHandlerOptions);
-            await _client.CloseAsync();
         }
 
         private async Task ProcessMessageAsync(SB.Message message, CancellationToken token)

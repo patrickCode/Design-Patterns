@@ -23,6 +23,8 @@ namespace PipelineFramework.Infrastructure.Events.Spec
                 Event.Properties = new Dictionary<string, object>(azureEvent.Properties);
             else
                 Event.Properties = new Dictionary<string, object>();
+
+            Event.ContentType = Event.Properties.ContainsKey("ContentType") ? Event.Properties["ContentType"].ToString() : "control";
         }
 
         public EventReceivedArgs(EventData azureEvent, string partitionKey) : this(azureEvent)

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PipelineFramework.AzureEventMailbox</AssemblyName>
+    <RootNamespace>PipelineFramework.AzureEventMailbox</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\PipelineFramework.Core.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Events\PipelineFramework.Infrastructure.Events.csproj" />
+    <ProjectReference Include="..\..\Shared\Common\PipelineFramework.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -13,6 +13,8 @@ namespace PipelineFramework.Core.Message
         [JsonProperty("errorMessages")]
         public List<string> ErrorMessages { get; set; }
 
+        public MiddlewareException() { }
+
         public MiddlewareException(Exception error): base()
         {
             Error = error;

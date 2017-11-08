@@ -17,5 +17,6 @@ namespace PipelineFramework.Core
         event EventHandler<BaseMessage> NewMessageReceived;
         Task SendMessage(BaseMessage message);
         Task StartListeningToIncomingMessages();
+        Task StopListening();
     }
 }

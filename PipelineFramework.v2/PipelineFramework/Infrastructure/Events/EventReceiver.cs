@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Azure.EventHubs.Processor;
 using PipelineFramework.Infrastructure.Events.Spec;
+using System;
 
 namespace PipelineFramework.Infrastructure.Events
 {
@@ -8,6 +9,7 @@ namespace PipelineFramework.Infrastructure.Events
     {
         private EventCallback _callback;
         public EventCallback Callback => _callback;
+        public event EventHandler<EventReceivedArgs> EventReceived = (sender, args) => { };
 
         private readonly IEventHubBuilder _builder;
         private readonly EventProcessorHost _eventProcessorHost;
@@ -21,6 +23,7 @@ namespace PipelineFramework.Infrastructure.Events
             _builder = builder;
             _eventHubName = eventHubName;
             _consumerName = consumerName;
+            _callback = new EventCallback(EventReceived);
             _eventProcessorHost = _builder.CreateEventProcessorHost(_eventHubName, _consumerName).Result;
             _eventProcessorFactory = new AzureEventProcessorFactory(Callback);
         }

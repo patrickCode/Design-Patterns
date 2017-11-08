@@ -11,6 +11,7 @@ namespace PipelineFramework.Infrastructure.Events.Spec
         public string Id { get; set; }
         public string PartitionKey { get; set; }
         public string Payload { get; set; }
+        public string ContentType { get; set; }
         public Dictionary<string, object> Properties { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime ReceivedOn { get; set; }
@@ -26,6 +27,9 @@ namespace PipelineFramework.Infrastructure.Events.Spec
                     azureEvent.Properties.Add(property);
                 }
             }
+            else
+                Properties = new Dictionary<string, object>();
+            Properties.Add("ContentType", ContentType);
             return azureEvent;
         }
     }

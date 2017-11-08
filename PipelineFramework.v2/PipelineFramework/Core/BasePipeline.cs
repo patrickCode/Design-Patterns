@@ -1,11 +1,24 @@
 ﻿using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using PipelineFramework.Core.Message;
 
 namespace PipelineFramework.Core
 {
-    public abstract class BasePipeline
+    [Serializable]
+    public abstract class BasePipeline : Middleware
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public Guid ExecutionId { get; set; }
+        public Guid CorrelationId { get; set; }
+
+        public Dictionary<int, Middleware> Middlewares { get; set; }
+
+        public BasePipeline() { }
+
+        public BasePipeline(string id, string name): base(id, name)
+        {
+            Middlewares = new Dictionary<int, Middleware>();
+        }
+
+        public abstract Task ExecuteNextAsync(MiddlewareResponse response);
     }
 }

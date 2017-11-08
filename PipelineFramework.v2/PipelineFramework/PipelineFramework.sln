@@ -17,9 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mailbox", "Mailbox", "{A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.InMemoryMailbox", "Mailbox\InMemoryMailbox\PipelineFramework.InMemoryMailbox.csproj", "{3D650BAF-A597-4FC2-A3C3-38E35425BECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.InMemoryMailbox", "Mailbox\InMemoryMailbox\PipelineFramework.InMemoryMailbox.csproj", "{3D650BAF-A597-4FC2-A3C3-38E35425BECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.AzureTopicMailbox", "Mailbox\AzureTopicMailbox\PipelineFramework.AzureTopicMailbox.csproj", "{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipelineFramework.AzureTopicMailbox", "Mailbox\AzureTopicMailbox\PipelineFramework.AzureTopicMailbox.csproj", "{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.AzureEventMailbox", "Mailbox\AzureEventMailbox\PipelineFramework.AzureEventMailbox.csproj", "{DCDD23F2-ADE2-45CB-B599-7EDA857CA574}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{65297255-FAF5-4F0E-A1E2-354816CC6844}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Pipelines.Native", "Pipelines\Native\PipelineFramework.Pipelines.Native.csproj", "{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,14 @@ Global
 		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +75,8 @@ Global
 		{E40CA272-8A48-435A-BFA9-F5330D0FB17A} = {E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}
 		{3D650BAF-A597-4FC2-A3C3-38E35425BECE} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
 		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
+		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
+		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE} = {65297255-FAF5-4F0E-A1E2-354816CC6844}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60F6F899-0624-4C98-AF88-0489BCC0C69C}

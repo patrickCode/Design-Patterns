@@ -44,5 +44,10 @@ namespace PipelineFramework.InMemoryMailbox
             _isActive = true;
             return Task.CompletedTask;
         }
+
+        public Task StopListening()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

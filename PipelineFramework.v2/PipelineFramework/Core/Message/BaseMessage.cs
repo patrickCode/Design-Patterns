@@ -18,6 +18,9 @@ namespace PipelineFramework.Core.Message
         [JsonProperty("middlewareId")]
         public string MiddlewareId { get; set; }
 
+        [JsonProperty("referenceId")]
+        public string ReferenceId { get; set; }
+
         [JsonProperty("message")]
         public string Message { get; set; }
 
