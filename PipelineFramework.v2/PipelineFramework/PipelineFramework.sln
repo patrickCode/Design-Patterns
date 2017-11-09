@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelineFramework.Pipelines.Native", "Pipelines\Native\PipelineFramework.Pipelines.Native.csproj", "{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PipelieneFramework.Instrastructure.Security", "Infrastructure\Security\PipelieneFramework.Instrastructure.Security.csproj", "{8D98E755-A98C-4CB2-8D49-7072F1175A6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D98E755-A98C-4CB2-8D49-7072F1175A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D98E755-A98C-4CB2-8D49-7072F1175A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D98E755-A98C-4CB2-8D49-7072F1175A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D98E755-A98C-4CB2-8D49-7072F1175A6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{8C432C83-B5BE-4A6C-87B2-023CF23C17A3} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
 		{DCDD23F2-ADE2-45CB-B599-7EDA857CA574} = {A7A43E08-3DC9-4A1A-AD56-AC73934DFE8F}
 		{0DCB7FEA-FE21-462C-80D4-A8EFE4A93DEE} = {65297255-FAF5-4F0E-A1E2-354816CC6844}
+		{8D98E755-A98C-4CB2-8D49-7072F1175A6E} = {E2BA5D51-6BFD-4E1D-9F7F-B688D4BCBE33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60F6F899-0624-4C98-AF88-0489BCC0C69C}

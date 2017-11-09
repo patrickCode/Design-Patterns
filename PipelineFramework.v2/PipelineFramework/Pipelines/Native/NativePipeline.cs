@@ -81,7 +81,7 @@ namespace PipelineFramework.Pipelines.Native
         {
             request.MiddlewareId = middleware.Id;
             request.PipelineId = Id;
-            request.ReferenceId = middleware.RefernceId.ToString();
+            request.ReferenceId = middleware.ReferenceId.ToString();
             
             await middleware.Inbox.SendMessage(request);
         }

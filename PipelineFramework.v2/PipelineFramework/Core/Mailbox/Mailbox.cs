@@ -6,7 +6,7 @@ using PipelineFramework.Core.Message;
 
 namespace PipelineFramework.Core
 {
-    public interface Mailbox
+    public interface Mailbox: IDisposable
     {   
         string Id { get; set; }
         string Name { get; set; }

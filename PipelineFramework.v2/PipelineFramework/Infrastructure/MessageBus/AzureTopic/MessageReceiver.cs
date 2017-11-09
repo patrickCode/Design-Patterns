@@ -32,7 +32,7 @@ namespace PipelineFramework.Infrastrucure.MessageBus.AzureTopic
 
         public async Task StartAsync()
         {
-            _client = await _builder.CreateSubscriptionClient(_topicName, _subscriptionName, _correlationFilter, _correlationRuleName);
+            _client = await _builder.CreateSubscriptionAsync(_topicName, _subscriptionName, _correlationFilter, _correlationRuleName);
             var messageHandlerOptions = new MessageHandlerOptions(exceptionReceivedEventArgs =>
             {
                 return Task.CompletedTask;

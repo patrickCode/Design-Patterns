@@ -17,7 +17,7 @@ namespace PipelineFramework.Core
         public Mailbox Outbox { get; set; }
 
         public Guid ExecutionId { get; set; }
-        public Guid RefernceId { get; set; }
+        public Guid ReferenceId { get; set; }
         public TimeSpan Timeout { get; set; }
         public IDictionary<string, object> EnvironmentConfiguration { get; set; }
 
@@ -33,7 +33,7 @@ namespace PipelineFramework.Core
             EnvironmentConfiguration = new Dictionary<string, object>();
             _allowedInboxTypes = new List<Type>();
             _allowedOutboxTypes = new List<Type>();
-            RefernceId = Guid.NewGuid();
+            ReferenceId = Guid.NewGuid();
             Status = MiddlewareStatus.Created;
         }
 

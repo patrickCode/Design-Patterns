@@ -8,6 +8,7 @@ using PipelineFramework.AzureTopicMailbox.Spec;
 using PipelineFramework.Infrastrucure.MessageBus.Spec;
 using PipelineFramework.Infrastrucure.MessageBus.AzureTopic;
 using PipelineFramework.Infrastrucure.MessageBus.AzureTopic.Spec;
+using PipelieneFramework.Instrastructure.Security;
 
 namespace PipelineFramework.AzureTopicMailbox
 {
@@ -35,6 +36,7 @@ namespace PipelineFramework.AzureTopicMailbox
         private IReceiver _messageReceiver;
         private readonly IMessageBusBuilder _messageBusBuilder;
         private readonly IMessageConverter _messageConverter;
+        private bool disposed = false;
 
         public event EventHandler<BaseMessage> NewMessageReceived;
 
@@ -46,9 +48,10 @@ namespace PipelineFramework.AzureTopicMailbox
             ReadMessages = new List<BaseMessage>();
 
             Address = address;
-            _messageBusBuilder = new MessageBusBuilder(address.ServiceBusConfiguration);
+            var authContext = new AuthContext(new TokenCache(), address.AuthenticationConfiguration);
+            _messageBusBuilder = new MessageBusBuilder(address.ServiceBusConfiguration, authContext);
             _messageSender = new MessageSender(_messageBusBuilder, new JsonConverter(), address.TopicName);
-            _messageReceiver = new MessageReceiver(_messageBusBuilder, _address.TopicName, _address.SubscriptionName, _address.CorrelationFilter, "Name", 5);
+            _messageReceiver = new MessageReceiver(_messageBusBuilder, _address.TopicName, _address.SubscriptionName, _address.CorrelationFilter, _address.CorrelationFilter, 1);
             _messageConverter = new MessageConverter();
         }
 
@@ -77,7 +80,25 @@ namespace PipelineFramework.AzureTopicMailbox
 
         public Task StopListening()
         {
-            throw new NotImplementedException();
+            return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed)
+                return;
+
+            if (disposing)
+            {
+                _messageBusBuilder.DeleteSubscriptionAsync(_address.TopicName, _address.SubscriptionName);
+            }
+            disposed = true;
         }
     }
 }
